@@ -246,7 +246,7 @@ EOF
     ) || log_error "Initramfs generation failed!"
 
     log_info "Initramfs build finished, file name: $cpio_output_file"
-    log_info "size: $(du -h "$cpio_output_file" | cut -f1)"
+    log_info "size: $(du -h "$(pwd)/${REPO_DIR}/$cpio_output_file" | cut -f1)"
 }
 
 # --- Clean Function ---
