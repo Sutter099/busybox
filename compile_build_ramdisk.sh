@@ -139,7 +139,7 @@ build_busybox() {
         make -j "$(nproc)" || log_error "BusyBox build failed"
 
         log_info "install to: ($INSTALL_DIR)..."
-        rm -rf "$INSTALL_DIR"
+        # rm -rf "$INSTALL_DIR"
         make install || log_error "BusyBox install failed!"
     ) || log_error "BusyBox build failed!"
     log_info "BusyBox build complete"
