@@ -173,7 +173,7 @@ generate_initramfs() {
 
     log_info "creating essential root directories inside staged rootfs..."
     # Ensure standard directories exist for a basic Linux rootfs
-    for dir in dev proc sys tmp etc/init.d var usr/bin usr/sbin lib lib64; do # Added lib and lib64
+    for dir in dev proc sys tmp etc/init.d var usr/bin usr/sbin mnt lib lib64; do # Added lib and lib64
         mkdir -p "$INSTALL_DIR/$dir" || log_error "mkdir $INSTALL_DIR/$dir failed"
     done
 
